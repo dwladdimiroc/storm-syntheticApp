@@ -34,12 +34,11 @@ public class SyntheticSpout implements IRichSpout {
         Thread thread = new Thread(){
             public void run(){
                 while (true) {
-                    int rand = (int) Math.floor(Math.random() * 100);
-                    int i;
-                    for (i = 0; i < rand; i++) {
+                    int rand = (int) Math.floor(Math.random() * 10);
+                    for (int i = 0; i < rand; i++) {
                         queue.add(rand);
                     }
-                    Utils.sleep(25);
+                    Utils.sleep(100);
                 }
             }
         };
